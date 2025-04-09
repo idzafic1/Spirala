@@ -22,7 +22,6 @@ fun NewsList(newsItems: List<NewsItem>, selectCategory: String) {
             modifier = Modifier
                 .fillMaxSize()
                 .wrapContentSize()
-                .testTag("empty_list")
         ) {
             MessageCard(selectCategory)
         }
