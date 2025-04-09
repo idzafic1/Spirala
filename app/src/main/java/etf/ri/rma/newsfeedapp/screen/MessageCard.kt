@@ -9,7 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-
+import androidx.compose.ui.Alignment
 @Composable
 fun MessageCard(selectCategory: String) {
     Card(
@@ -18,7 +18,7 @@ fun MessageCard(selectCategory: String) {
     ) {
         Box(
             modifier = Modifier.fillMaxWidth(),
-            contentAlignment = androidx.compose.ui.Alignment.Center
+            contentAlignment = Alignment.Center
         ) {
             Text(
                 text = "Nema pronađenih vijesti u kategoriji $selectCategory",

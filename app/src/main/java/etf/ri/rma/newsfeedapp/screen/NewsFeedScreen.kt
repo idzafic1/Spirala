@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import etf.ri.rma.newsfeedapp.model.NewsItem
-
 class NewsFeedScreen(
     private val newsItems: List<NewsItem>
 ) {
@@ -22,16 +21,25 @@ class NewsFeedScreen(
     }
 }
 
+
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun FilterChips(selectedCategory: String, onCategorySelected: (String) -> Unit) {
-    Row(
+    FlowRow(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(8.dp),
-        horizontalArrangement = Arrangement.SpaceEvenly
+            .padding(
+                start = 8.dp,
+                end = 8.dp,
+                top = 32.dp
+            ),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        val categories = listOf("All", "Politika", "Sport", "Nauka/tehnologija")
-        val tags = listOf("filter_chip_all", "filter_chip_pol", "filter_chip_spo", "filter_chip_sci")
+        // ovo mozda bude potrebno promijeniti u Sve umjesto All
+        // provjeriti sa asistentom
+        val categories = listOf("All", "Politika", "Sport", "Nauka/tehnologija", "Other")
+        val tags = listOf("filter_chip_all", "filter_chip_pol", "filter_chip_spo", "filter_chip_sci", "filter_chip_other")
 
         categories.forEachIndexed { index, category ->
             FilterChip(

@@ -6,7 +6,7 @@ object NewsData {
             NewsItem(
                 id = "1",
                 title = "Vijest 1",
-                snippet = "Ovo je sažetak vijesti 1.",
+                snippet = "Test Opis Milorada Dodika 1.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = true,
@@ -16,7 +16,7 @@ object NewsData {
             NewsItem(
                 id = "2",
                 title = "Vijest 2",
-                snippet = "Ovo je sažetak vijesti 2.",
+                snippet = "Test Opis Milorada Dodika 2.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = false,
@@ -26,7 +26,7 @@ object NewsData {
             NewsItem(
                 id = "3",
                 title = "Vijest 3",
-                snippet = "Ovo je sažetak vijesti 3.",
+                snippet = "Test Opis Milorada Dodika 3.",
                 imageUrl = null,
                 category = "Nauka/tehnologija",
                 isFeatured = true,
@@ -36,7 +36,7 @@ object NewsData {
             NewsItem(
                 id = "4",
                 title = "Milorad Dodik News 1",
-                snippet = "This is a snippet about Milorad Dodik 1.",
+                snippet = "Opis Milorada Dodika 1.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = false,
@@ -46,7 +46,7 @@ object NewsData {
             NewsItem(
                 id = "5",
                 title = "Milorad Dodik News 2",
-                snippet = "This is a snippet about Milorad Dodik 2.",
+                snippet = "Opis Milorada Dodika 2.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = true,
@@ -56,7 +56,7 @@ object NewsData {
             NewsItem(
                 id = "6",
                 title = "Milorad Dodik News 3",
-                snippet = "This is a snippet about Milorad Dodik 3.",
+                snippet = "Opis Milorada Dodika 3.",
                 imageUrl = null,
                 category = "Nauka/tehnologija",
                 isFeatured = false,
@@ -66,7 +66,7 @@ object NewsData {
             NewsItem(
                 id = "7",
                 title = "Milorad Dodik News 4",
-                snippet = "This is a snippet about Milorad Dodik 4.",
+                snippet = "Opis Milorada Dodika 4.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = true,
@@ -76,7 +76,7 @@ object NewsData {
             NewsItem(
                 id = "8",
                 title = "Milorad Dodik News 5",
-                snippet = "This is a snippet about Milorad Dodik 5.",
+                snippet = "Opis Milorada Dodika 5.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = false,
@@ -86,7 +86,7 @@ object NewsData {
             NewsItem(
                 id = "9",
                 title = "Milorad Dodik News 6",
-                snippet = "This is a snippet about Milorad Dodik 6.",
+                snippet = "Opis Milorada Dodika 6.",
                 imageUrl = null,
                 category = "Nauka/tehnologija",
                 isFeatured = true,
@@ -96,7 +96,7 @@ object NewsData {
             NewsItem(
                 id = "10",
                 title = "Milorad Dodik News 7",
-                snippet = "This is a snippet about Milorad Dodik 7.",
+                snippet = "Opis Milorada Dodika 7.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = false,
@@ -106,7 +106,7 @@ object NewsData {
             NewsItem(
                 id = "11",
                 title = "Milorad Dodik News 8",
-                snippet = "This is a snippet about Milorad Dodik 8.",
+                snippet = "Opis Milorada Dodika 8.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = true,
@@ -116,7 +116,7 @@ object NewsData {
             NewsItem(
                 id = "12",
                 title = "Milorad Dodik News 9",
-                snippet = "This is a snippet about Milorad Dodik 9.",
+                snippet = "Opis Milorada Dodika 9.",
                 imageUrl = null,
                 category = "Nauka/tehnologija",
                 isFeatured = false,
@@ -126,7 +126,7 @@ object NewsData {
             NewsItem(
                 id = "13",
                 title = "Milorad Dodik News 10",
-                snippet = "This is a snippet about Milorad Dodik 10.",
+                snippet = "Opis Milorada Dodika 10.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = false,
@@ -136,7 +136,7 @@ object NewsData {
             NewsItem(
                 id = "14",
                 title = "Milorad Dodik News 11",
-                snippet = "This is a snippet about Milorad Dodik 11.",
+                snippet = "Opis Milorada Dodika 11.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = false,
@@ -146,7 +146,7 @@ object NewsData {
             NewsItem(
                 id = "15",
                 title = "Milorad Dodik News 12",
-                snippet = "This is a snippet about Milorad Dodik 12.",
+                snippet = "Opis Milorada Dodika 12.",
                 imageUrl = null,
                 category = "Nauka/tehnologija",
                 isFeatured = true,
@@ -156,7 +156,7 @@ object NewsData {
             NewsItem(
                 id = "16",
                 title = "Milorad Dodik News 13",
-                snippet = "This is a snippet about Milorad Dodik 13.",
+                snippet = "Opis Milorada Dodika 13.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = false,
@@ -166,7 +166,7 @@ object NewsData {
             NewsItem(
                 id = "17",
                 title = "Milorad Dodik News 14",
-                snippet = "This is a snippet about Milorad Dodik 14.",
+                snippet = "Opis Milorada Dodika 14.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = false,
@@ -176,7 +176,7 @@ object NewsData {
             NewsItem(
                 id = "18",
                 title = "Milorad Dodik News 15",
-                snippet = "This is a snippet about Milorad Dodik 15.",
+                snippet = "Opis Milorada Dodika 15.",
                 imageUrl = null,
                 category = "Nauka/tehnologija",
                 isFeatured = false,
@@ -186,7 +186,7 @@ object NewsData {
             NewsItem(
                 id = "19",
                 title = "Milorad Dodik News 16",
-                snippet = "This is a snippet about Milorad Dodik 16.",
+                snippet = "Opis Milorada Dodika 16.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = true,
@@ -196,7 +196,7 @@ object NewsData {
             NewsItem(
                 id = "20",
                 title = "Milorad Dodik News 17",
-                snippet = "This is a snippet about Milorad Dodik 17.",
+                snippet = "Opis Milorada Dodika 17.",
                 imageUrl = null,
                 category = "Sport",
                 isFeatured = false,

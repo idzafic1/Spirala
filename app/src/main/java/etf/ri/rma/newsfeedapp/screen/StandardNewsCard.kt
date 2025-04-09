@@ -54,7 +54,8 @@ fun StandardNewsCard(newsItem: NewsItem) {
                 Text(
                     text = "${newsItem.source} • ${newsItem.publishedDate}",
                     style = MaterialTheme.typography.labelSmall,
-                    modifier = Modifier.padding(top = 4.dp)
+                    modifier = Modifier.padding(top = 4.dp),
+                    maxLines = 1
                 )
             }
         }
