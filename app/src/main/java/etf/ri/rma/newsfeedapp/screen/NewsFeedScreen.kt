@@ -36,9 +36,7 @@ fun FilterChips(selectedCategory: String, onCategorySelected: (String) -> Unit) 
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        // ovo mozda bude potrebno promijeniti u Sve umjesto All
-        // provjeriti sa asistentom
-        val categories = listOf("All", "Politika", "Sport", "Nauka/tehnologija", "Other")
+        val categories = listOf("Sve", "Politika", "Sport", "Nauka/tehnologija", "Other")
         val tags = listOf("filter_chip_all", "filter_chip_pol", "filter_chip_spo", "filter_chip_sci", "filter_chip_other")
 
         categories.forEachIndexed { index, category ->
@@ -51,3 +49,4 @@ fun FilterChips(selectedCategory: String, onCategorySelected: (String) -> Unit) 
         }
     }
 }
+
