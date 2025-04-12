@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    var selectedCategory by remember { mutableStateOf("All") }
+                    var selectedCategory by remember { mutableStateOf("Sve") }
                     val newsFeedScreen = NewsFeedScreen(newsItems = NewsData.getAllNews())
 
                     newsFeedScreen.Display(selectedCategory) { category ->

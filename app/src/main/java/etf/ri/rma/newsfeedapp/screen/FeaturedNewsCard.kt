@@ -23,10 +23,10 @@ fun FeaturedNewsCard(newsItem: NewsItem) {
         Column(
             modifier = Modifier
                 .padding(8.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+           // horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                painter = painterResource(id = R.drawable.image),
                 contentDescription = "BANNER IMAGE",
                 modifier = Modifier
                     .fillMaxWidth()

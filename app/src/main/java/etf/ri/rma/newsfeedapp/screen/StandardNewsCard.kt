@@ -26,7 +26,7 @@ fun StandardNewsCard(newsItem: NewsItem) {
                 .padding(8.dp)
         ) {
             Image(
-                painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                painter = painterResource(id = R.drawable.image),
                 contentDescription = "IMG",
                 modifier = Modifier
                     .size(100.dp)
@@ -36,7 +36,7 @@ fun StandardNewsCard(newsItem: NewsItem) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(8.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
+                //horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = newsItem.title,

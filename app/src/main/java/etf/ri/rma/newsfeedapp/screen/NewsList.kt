@@ -13,7 +13,7 @@ import etf.ri.rma.newsfeedapp.model.NewsItem
 @Composable
 fun NewsList(newsItems: List<NewsItem>, selectCategory: String) {
     val filteredNewsItems = when (selectCategory) {
-        "All" -> newsItems
+        "Sve" -> newsItems
         else -> newsItems.filter { it.category == selectCategory }
     }
 
