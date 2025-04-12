@@ -13,6 +13,8 @@ import androidx.compose.ui.unit.dp
 import etf.ri.rma.newsfeedapp.R
 import etf.ri.rma.newsfeedapp.model.NewsItem
 
+
+
 @Composable
 fun FeaturedNewsCard(newsItem: NewsItem) {
     Card(
@@ -22,12 +24,12 @@ fun FeaturedNewsCard(newsItem: NewsItem) {
     ) {
         Column(
             modifier = Modifier
-                .padding(8.dp),
-           // horizontalAlignment = Alignment.CenterHorizontally
+                .fillMaxWidth()
+                .padding(8.dp)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.image),
-                contentDescription = "BANNER IMAGE",
+                contentDescription = "image",
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(200.dp)
@@ -35,19 +37,19 @@ fun FeaturedNewsCard(newsItem: NewsItem) {
             Text(
                 text = newsItem.title,
                 style = MaterialTheme.typography.titleLarge,
-                modifier = Modifier.padding(8.dp),
+                modifier = Modifier.padding(top = 8.dp),
                 maxLines = 2
             )
             Text(
                 text = newsItem.snippet,
                 style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(8.dp),
+                modifier = Modifier.padding(top = 4.dp),
                 maxLines = 2
             )
             Text(
                 text = "${newsItem.source} • ${newsItem.publishedDate}",
                 style = MaterialTheme.typography.bodySmall,
-                modifier = Modifier.padding(8.dp),
+                modifier = Modifier.padding(top = 4.dp),
                 maxLines = 1
             )
         }

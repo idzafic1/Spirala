@@ -27,7 +27,7 @@ fun StandardNewsCard(newsItem: NewsItem) {
         ) {
             Image(
                 painter = painterResource(id = R.drawable.image),
-                contentDescription = "IMG",
+                contentDescription = "image",
                 modifier = Modifier
                     .size(100.dp)
                     .padding(8.dp)
