@@ -6,15 +6,22 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import etf.ri.rma.newsfeedapp.model.NewsItem
+import androidx.compose.material3.Text
 
 @Composable
-fun NewsList(newsItems: List<NewsItem>, selectCategory: String) {
-    val filteredNewsItems = when (selectCategory) {
-        "Sve" -> newsItems
-        else -> newsItems.filter { it.category == selectCategory }
+fun NewsList(newsItems: List<NewsItem>, selectCategories: List<String>) {
+    var selectedID by remember() { mutableStateOf(setOf<String>()) }
+    val filteredNewsItems = if (selectCategories.contains("Sve")) {
+        newsItems
+    } else {
+        newsItems.filter { it.category in selectCategories }
     }
 
     if (filteredNewsItems.isEmpty()) {
@@ -23,7 +30,10 @@ fun NewsList(newsItems: List<NewsItem>, selectCategory: String) {
                 .fillMaxSize()
                 .wrapContentSize()
         ) {
-            MessageCard(selectCategory)
+            Text(
+                text = "No news available",
+                modifier = Modifier.testTag("no_news_text")
+            )
         }
     } else {
         LazyColumn(
@@ -31,9 +41,27 @@ fun NewsList(newsItems: List<NewsItem>, selectCategory: String) {
         ) {
             items(filteredNewsItems) { newsItem ->
                 if (newsItem.isFeatured) {
-                    FeaturedNewsCard(newsItem = newsItem)
+                    FeaturedNewsCard(newsItem = newsItem,
+                        isSelecterd = selectedID.contains(newsItem.id),
+                        onClick = {
+                            selectedID = if (selectedID.contains(newsItem.id)) {
+                                selectedID - newsItem.id
+                            } else {
+                                selectedID + newsItem.id
+                            }
+                        }
+                    )
                 } else {
-                    StandardNewsCard(newsItem = newsItem)
+                    StandardNewsCard(newsItem = newsItem,
+                        selected = selectedID.contains(newsItem.id),
+                        onClick = {
+                            selectedID = if (selectedID.contains(newsItem.id)) {
+                                selectedID - newsItem.id
+                            } else {
+                                selectedID + newsItem.id
+                            }
+                        }
+                    )
                 }
             }
         }

@@ -12,7 +12,7 @@ object NewsData {
                 imageUrl = "drawable/image.jpg",
                 category = "Sport",
                 isFeatured = true,
-                source = "klix.ba",
+                source = "Klix.ba",
                 publishedDate = "2023-10-01"
             ),
             NewsItem(
@@ -23,7 +23,7 @@ object NewsData {
                 category = "Politika",
                 isFeatured = true,
                 source = "Izvor 2",
-                publishedDate = "2023-10-02"
+                publishedDate = "2025-10-02"
             ),
             NewsItem(
                 id = "3",
@@ -33,7 +33,7 @@ object NewsData {
                 category = "Politika",
                 isFeatured = true,
                 source = "Izvor 3",
-                publishedDate = "2023-10-03"
+                publishedDate = "2025-04-03"
             ),
             NewsItem(
                 id = "4",
@@ -43,7 +43,7 @@ object NewsData {
                 category = "Sport",
                 isFeatured = false,
                 source = "Source 4",
-                publishedDate = "2023-10-04"
+                publishedDate = "2023-11-04"
             ),
             NewsItem(
                 id = "5",
