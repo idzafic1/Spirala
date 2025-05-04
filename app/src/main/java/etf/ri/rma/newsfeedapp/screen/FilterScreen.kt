@@ -103,6 +103,8 @@ fun FilterScreen(navController: NavController) {
             .verticalScroll(scrollState)
             .padding(16.dp)
     ) {
+        Spacer(modifier = Modifier.height(24.dp))
+
         FlowRow(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(8.dp),

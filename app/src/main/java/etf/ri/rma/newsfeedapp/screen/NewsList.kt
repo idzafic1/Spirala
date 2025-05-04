@@ -2,6 +2,7 @@ package etf.ri.rma.newsfeedapp.screen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -33,7 +34,7 @@ fun NewsList(newsItems: List<NewsItem>, selectCategory: String) {
                 if (newsItem.isFeatured) {
                     FeaturedNewsCard(newsItem = newsItem)
                 } else {
-                    StandardNewsCard(newsItem = newsItem)
+                    StandardNewsCard(newsItem = newsItem,)
                 }
             }
         }
