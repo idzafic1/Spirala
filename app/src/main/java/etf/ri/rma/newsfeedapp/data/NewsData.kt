@@ -12,8 +12,8 @@ object NewsData {
                 imageUrl = "drawable/image.jpg",
                 category = "Sport",
                 isFeatured = true,
-                source = "Klix.ba",
-                publishedDate = "2023-10-01"
+                source = "klix.ba",
+                publishedDate = "01-10-2023"
             ),
             NewsItem(
                 id = "2",
@@ -23,7 +23,7 @@ object NewsData {
                 category = "Politika",
                 isFeatured = true,
                 source = "Izvor 2",
-                publishedDate = "2025-10-02"
+                publishedDate = "02-10-2023"
             ),
             NewsItem(
                 id = "3",
@@ -33,7 +33,7 @@ object NewsData {
                 category = "Politika",
                 isFeatured = true,
                 source = "Izvor 3",
-                publishedDate = "2025-04-03"
+                publishedDate = "03-10-2023"
             ),
             NewsItem(
                 id = "4",
@@ -43,7 +43,7 @@ object NewsData {
                 category = "Sport",
                 isFeatured = false,
                 source = "Source 4",
-                publishedDate = "2023-11-04"
+                publishedDate = "04-10-2023"
             ),
             NewsItem(
                 id = "5",
@@ -53,7 +53,7 @@ object NewsData {
                 category = "Nauka/tehnologija",
                 isFeatured = true,
                 source = "Source 5",
-                publishedDate = "2023-10-05"
+                publishedDate = "05-10-2023"
             ),
             NewsItem(
                 id = "6",
@@ -63,7 +63,7 @@ object NewsData {
                 category = "Politika",
                 isFeatured = false,
                 source = "Source 6",
-                publishedDate = "2023-10-06"
+                publishedDate = "06-10-2023"
             ),
             NewsItem(
                 id = "7",
@@ -73,7 +73,7 @@ object NewsData {
                 category = "Sport",
                 isFeatured = true,
                 source = "Source 7",
-                publishedDate = "2023-10-07"
+                publishedDate = "07-10-2023"
             ),
             NewsItem(
                 id = "8",
@@ -83,7 +83,7 @@ object NewsData {
                 category = "Sport",
                 isFeatured = false,
                 source = "Source 8",
-                publishedDate = "2023-10-08"
+                publishedDate = "08-10-2023"
             ),
             NewsItem(
                 id = "9",
@@ -93,7 +93,7 @@ object NewsData {
                 category = "Sport",
                 isFeatured = true,
                 source = "Source 9",
-                publishedDate = "2023-10-09"
+                publishedDate = "09-10-2023"
             ),
             NewsItem(
                 id = "10",
@@ -103,7 +103,7 @@ object NewsData {
                 category = "Nauka/tehnologija",
                 isFeatured = false,
                 source = "Source 10",
-                publishedDate = "2023-10-10"
+                publishedDate = "10-10-2023"
             ),
             NewsItem(
                 id = "11",
@@ -113,7 +113,7 @@ object NewsData {
                 category = "Nauka/tehnologija",
                 isFeatured = true,
                 source = "Source 11",
-                publishedDate = "2023-10-11"
+                publishedDate = "11-10-2023"
             ),
             NewsItem(
                 id = "12",
@@ -123,7 +123,7 @@ object NewsData {
                 category = "Nauka/tehnologija",
                 isFeatured = false,
                 source = "Source 12",
-                publishedDate = "2023-10-12"
+                publishedDate = "12-10-2023"
             ),
             NewsItem(
                 id = "13",
@@ -133,7 +133,7 @@ object NewsData {
                 category = "Politika",
                 isFeatured = false,
                 source = "Source 13",
-                publishedDate = "2023-10-13"
+                publishedDate = "13-10-2023"
             ),
             NewsItem(
                 id = "14",
@@ -143,7 +143,7 @@ object NewsData {
                 category = "Politika",
                 isFeatured = false,
                 source = "Source 14",
-                publishedDate = "2023-10-14"
+                publishedDate = "14-10-2023"
             ),
             NewsItem(
                 id = "15",
@@ -153,7 +153,7 @@ object NewsData {
                 category = "Politika",
                 isFeatured = true,
                 source = "Source 15",
-                publishedDate = "2023-10-15"
+                publishedDate = "15-10-2023"
             ),
             NewsItem(
                 id = "16",
@@ -163,7 +163,7 @@ object NewsData {
                 category = "Nauka/tehnologija",
                 isFeatured = false,
                 source = "Source 16",
-                publishedDate = "2023-10-16"
+                publishedDate = "16-10-2023"
             ),
             NewsItem(
                 id = "17",
@@ -173,7 +173,7 @@ object NewsData {
                 category = "Sport",
                 isFeatured = false,
                 source = "Source 17",
-                publishedDate = "2023-10-17"
+                publishedDate = "17-10-2023"
             ),
             NewsItem(
                 id = "18",
@@ -183,7 +183,7 @@ object NewsData {
                 category = "Nauka/tehnologija",
                 isFeatured = false,
                 source = "Source 18",
-                publishedDate = "2023-10-18"
+                publishedDate = "18-10-2023"
             ),
             NewsItem(
                 id = "19",
@@ -193,7 +193,7 @@ object NewsData {
                 category = "Sport",
                 isFeatured = true,
                 source = "Source 19",
-                publishedDate = "2023-10-19"
+                publishedDate = "19-10-2023"
             ),
             NewsItem(
                 id = "20",
@@ -203,7 +203,7 @@ object NewsData {
                 category = "Poliitika",
                 isFeatured = false,
                 source = "Source 20",
-                publishedDate = "2023-10-20"
+                publishedDate = "20-10-2023"
             )
         )
     }

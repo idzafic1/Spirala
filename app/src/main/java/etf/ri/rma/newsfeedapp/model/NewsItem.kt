@@ -10,3 +10,4 @@ data class NewsItem(
     val source: String,
     val publishedDate: String
 )
+

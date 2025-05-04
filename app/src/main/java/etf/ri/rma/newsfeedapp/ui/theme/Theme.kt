@@ -5,15 +5,22 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+
+// Unique color variable names to avoid conflicts
+private val SpiralaDarkBackground = Color(0xFF121212)
+private val SpiralaChipBackgroundDark = Color(0xFF2D2D2D)
+private val SpiralaChipTextDark = Color(0xFFEEEEEE)
+private val SpiralaLightBackground = Color(0xFFFAFAFA)
 
 private val DarkColorScheme = darkColorScheme(
-    background = DarkBackground,
-    surface = ChipBackgroundDark,
-    onSurface = ChipTextDark
+    background = SpiralaDarkBackground,
+    surface = SpiralaChipBackgroundDark,
+    onSurface = SpiralaChipTextDark
 )
 
 private val LightColorScheme = lightColorScheme(
-    background = LightBackground
+    background = SpiralaLightBackground
 )
 
 @Composable
@@ -25,7 +32,6 @@ fun SpiralaCopyTheme(
 
     MaterialTheme(
         colorScheme = colors,
-        typography = Typography,
         content = content
     )
 }
