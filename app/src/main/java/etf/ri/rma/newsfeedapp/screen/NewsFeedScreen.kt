@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.FlowRow
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun NewsFeedScreen(navController: NavController) {
-    // Get filter state from savedStateHandle or use defaults
     val savedStateHandle = navController.currentBackStackEntry?.savedStateHandle
     var selectedCategory by remember {
         mutableStateOf(savedStateHandle?.get<String>("selectedCategory") ?: "Sve")
@@ -36,7 +35,6 @@ fun NewsFeedScreen(navController: NavController) {
         mutableStateOf(savedStateHandle?.get<List<String>>("unwantedWords") ?: emptyList())
     }
 
-    // Save filter state whenever it changes
     LaunchedEffect(selectedCategory, startDate, endDate, unwantedWords) {
         savedStateHandle?.set("selectedCategory", selectedCategory)
         savedStateHandle?.set("startDate", startDate)
@@ -44,7 +42,6 @@ fun NewsFeedScreen(navController: NavController) {
         savedStateHandle?.set("unwantedWords", unwantedWords)
     }
 
-    // Listen for updates from filter screen
     LaunchedEffect(key1 = navController.currentBackStackEntry) {
         navController.currentBackStackEntry?.savedStateHandle?.apply {
             get<String>("updatedCategory")?.let {
@@ -68,25 +65,19 @@ fun NewsFeedScreen(navController: NavController) {
 
     val newsItems = NewsData.getAllNews()
 
-    // Filter news based on selection criteria
     val filteredNews = newsItems.filter { newsItem ->
-        // Category filter
         val matchesCategory = selectedCategory == "Sve" || newsItem.category == selectedCategory
 
-        // Date range filter
         val matchesDateRange = if (startDate != null && endDate != null) {
-            try {
-                val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
-                val itemDate = dateFormat.parse(newsItem.publishedDate)?.time ?: 0
+            val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+            val parsedDate = dateFormat.parse(newsItem.publishedDate)
+            parsedDate?.time?.let { itemDate ->
                 itemDate in startDate!!..endDate!!
-            } catch (e: Exception) {
-                true // If date parsing fails, include the item
-            }
+            } ?: true
         } else {
-            true // No date filter applied
+            true
         }
 
-        // Unwanted words filter
         val containsUnwantedWord = unwantedWords.any { word ->
             newsItem.title.contains(word, ignoreCase = true) ||
                     newsItem.snippet.contains(word, ignoreCase = true)

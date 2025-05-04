@@ -12,18 +12,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import etf.ri.rma.newsfeedapp.R
 import etf.ri.rma.newsfeedapp.model.NewsItem
 
 @Composable
 fun StandardNewsCard(newsItem: NewsItem, modifier: Modifier = Modifier) {
-    Card(modifier = modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier.padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
+    Card(modifier = modifier) {
+        Column(modifier = Modifier.padding(16.dp)) {
             newsItem.imageUrl?.let { imageUrl ->
                 val resourceName = imageUrl.substringAfter("drawable/").substringBefore(".")
                 val resourceId = LocalContext.current.resources.getIdentifier(
@@ -31,65 +27,42 @@ fun StandardNewsCard(newsItem: NewsItem, modifier: Modifier = Modifier) {
                 )
 
                 if (resourceId != 0) {
-                    Box(
+                    Image(
+                        painter = painterResource(id = resourceId),
+                        contentDescription = "News image",
                         modifier = Modifier
-                            .size(100.dp)
-                            .weight(0.3f)
-                    ) {
-                        Image(
-                            painter = painterResource(id = resourceId),
-                            contentDescription = "News image",
-                            modifier = Modifier.fillMaxSize(),
-                            contentScale = ContentScale.Crop
-                        )
-                    }
+                            .fillMaxWidth()
+                            .height(200.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
                 }
+
             }
 
-            Spacer(modifier = Modifier.width(16.dp))
-
-            // Text Content Column
-            Column(
-                modifier = Modifier.weight(0.7f)
+            Text(
+                text = newsItem.title,
+                style = MaterialTheme.typography.titleMedium
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = newsItem.snippet,
+                style = MaterialTheme.typography.bodyMedium
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = newsItem.title,
-                    style = MaterialTheme.typography.titleMedium,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
+                    text = newsItem.category,
+                    style = MaterialTheme.typography.bodySmall
                 )
-                Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = newsItem.snippet,
-                    style = MaterialTheme.typography.bodyMedium,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = "${newsItem.source} • ${newsItem.publishedDate}",
-                    style = MaterialTheme.typography.bodySmall,
-                    modifier = Modifier.padding(top = 4.dp),
-                    maxLines = 1
+                    text = newsItem.publishedDate,
+                    style = MaterialTheme.typography.bodySmall
                 )
             }
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewStandardNewsCard() {
-    StandardNewsCard(
-        newsItem = NewsItem(
-            id = "1",
-            title = "Otkriven novi planet u Sunčevom sustavu",
-            snippet = "Astronomi su otkrili novi planet skriven iza orbite Neptuna, što bi moglo promijeniti naše razumijevanje svemira.",
-            category = "Nauka/tehnologija",
-            source = "Astronomy News",
-            publishedDate = "04-05-2025",
-            isFeatured = false,
-            imageUrl = "drawable/image.jpg"
-        )
-    )
 }

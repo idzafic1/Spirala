@@ -151,7 +151,6 @@ fun FilterScreen(navController: NavController) {
             )
         }
 
-        // Put both date range buttons in the same row
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -288,7 +287,6 @@ fun FilterScreen(navController: NavController) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Put both action buttons in the same row
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(8.dp)

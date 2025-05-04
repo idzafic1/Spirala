@@ -164,14 +164,10 @@ private fun findRelatedNews(currentNews: NewsItem, allNews: List<NewsItem>): Lis
     if (sameCategory.isEmpty()) return emptyList()
 
     fun calculateDateDifference(date1: String, date2: String): Int {
-        try {
             val formatter = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
             val d1 = formatter.parse(date1)?.time ?: 0
             val d2 = formatter.parse(date2)?.time ?: 0
             return abs((d1 - d2) / (24 * 60 * 60 * 1000)).toInt()
-        } catch (e: Exception) {
-            return Int.MAX_VALUE
-        }
     }
     return sameCategory
         .sortedBy { it.title }
